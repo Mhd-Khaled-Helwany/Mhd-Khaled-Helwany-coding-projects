@@ -1,0 +1,12 @@
+recoil 2p
+unfair AI 1p
+sounds 1p
+explosion 2p
+json file 2p
+hitpoints 1.5p
+score counter 1p
+hot seat 1p 
+
+milestones: 3.5p
+
+total: 15p
