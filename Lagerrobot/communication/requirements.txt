@@ -1,0 +1,4 @@
+smbus3
+flask
+Flask-apscheduler
+flask-cors

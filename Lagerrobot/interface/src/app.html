@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script defer src="app.js"></script>
+	<script defer src="map.js"></script>
+</head>
+
+<body>
+	<div class="page">
+		<main class="layout">
+			<section class="panel panel--status">
+				<!-- Live Mode Toggle -->
+				<div class="panel__actions">
+					<button class="mode-toggle" type="button" data-poll-toggle>
+						<span class="mode-toggle__label">Live refresh</span>
+						<span class="mode-toggle__track">
+							<span class="mode-toggle__thumb"></span>
+						</span>
+					</button>
+					<!-- Mode Information -->
+					<span class="pills-group">
+						<span class="stat__value pill pill--mode mode-status-badge" data-mode-indicator>Manual</span>
+						<span class="stat__value pill connection-status-badge"
+							data-connection-status>Connecting...</span>
+					</span>
+				</div>
+
+				<!-- Telemetry Data -->
+				<div class="panel__body status-subcard">
+					<div class="stat-list">
+						<!-- Autonomous State -->
+						<div class="stat">
+							<span class="label__name">Auto state</span>
+							<span class="stat__value" data-auto-status>—</span>
+						</div>
+						<!-- Current Position -->
+						<div class="stat">
+							<span class="label__name">Current position</span>
+							<span class="stat__value" data-current-position>—</span>
+						</div>
+						<!-- Destination Position -->
+						<div class="stat">
+							<span class="label__name">Destination position</span>
+							<span class="stat__value" data-destination-position>—</span>
+						</div>
+						<!-- In Factory -->
+						<div class="stat">
+							<span class="label__name">In factory</span>
+							<span class="stat__value" data-in-factory>—</span>
+						</div>
+						<!-- Ultrasound Data -->
+						<div class="stat">
+							<span class="label__name">Ultrasound</span>
+							<span class="stat__value" data-ultrasound>—</span>
+						</div>
+						<!-- Formatted Gyro Data -->
+						<div class="stat">
+							<span class="label__name">Gyro angle</span>
+							<span class="stat__value" data-gyro-angle>—</span>
+						</div>
+						<!-- Raw Gyro Data -->
+						<div class="stat">
+							<span class="label__name">Gyro raw</span>
+							<span class="stat__value" data-gyro-raw>—</span>
+						</div>
+						<!-- Line Sensor Data -->
+						<div class="stat">
+							<span class="label__name">Line sensors</span>
+							<div class="mini-line-sensors" data-mini-line-sensors>
+								<!-- First row of line sensors -->
+								<div class="mini-sensor-row" data-mini-row="A">
+									<div class="mini-sensor-bar" data-sensor="0"></div>
+									<div class="mini-sensor-bar" data-sensor="1"></div>
+									<div class="mini-sensor-bar" data-sensor="2"></div>
+									<div class="mini-sensor-bar" data-sensor="3"></div>
+									<div class="mini-sensor-bar" data-sensor="4"></div>
+									<div class="mini-sensor-bar" data-sensor="5"></div>
+									<div class="mini-sensor-bar" data-sensor="6"></div>
+									<div class="mini-sensor-bar" data-sensor="7"></div>
+									<div class="mini-sensor-bar" data-sensor="8"></div>
+									<div class="mini-sensor-bar" data-sensor="9"></div>
+									<div class="mini-sensor-bar" data-sensor="10"></div>
+								</div>
+								<!-- Second row of line sensors -->
+								<div class="mini-sensor-row" data-mini-row="B">
+									<div class="mini-sensor-bar" data-sensor="0"></div>
+									<div class="mini-sensor-bar" data-sensor="1"></div>
+									<div class="mini-sensor-bar" data-sensor="2"></div>
+									<div class="mini-sensor-bar" data-sensor="3"></div>
+									<div class="mini-sensor-bar" data-sensor="4"></div>
+									<div class="mini-sensor-bar" data-sensor="5"></div>
+									<div class="mini-sensor-bar" data-sensor="6"></div>
+									<div class="mini-sensor-bar" data-sensor="7"></div>
+									<div class="mini-sensor-bar" data-sensor="8"></div>
+									<div class="mini-sensor-bar" data-sensor="9"></div>
+									<div class="mini-sensor-bar" data-sensor="10"></div>
+								</div>
+							</div>
+						</div>
+						<!-- Proportional Parameter -->
+						<div class="stat">
+							<span class="label__name">Proportional parameter</span>
+							<span class="stat__value" data-proportional-parameter>—</span>
+						</div>
+						<!-- Angle Parameter -->
+						<div class="stat">
+							<span class="label__name">Angle parameter</span>
+							<span class="stat__value" data-angle-parameter>—</span>
+						</div>
+						<!-- Drive Speed -->
+						<div class="stat">
+							<span class="label__name">Drive speed</span>
+							<span class="stat__value" data-drive-speed>—</span>
+						</div>
+						<!-- Turn Speed -->
+						<div class="stat">
+							<span class="label__name">Turn speed</span>
+							<span class="stat__value" data-turn-speed>—</span>
+						</div>
+						<!-- Steer Signal -->
+						<div class="stat">
+							<span class="label__name">Steer signal</span>
+							<span class="stat__value" data-steer-signal>—</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ttyd Terminal Window -->
+			<section class="console-card">
+				<iframe src="http://10.42.0.1:7681/" title="Robot Shell" class="terminal-iframe"
+					loading="lazy"></iframe>
+			</section>
+
+			<!-- Map Section -->
+			<section class="panel panel--map">
+				<div class="panel__body panel__body--map">
+					<div class="map-card">
+
+						<div class="map-viewport">
+							<svg data-map role="img" aria-label="Warehouse pickup map"></svg>
+							<div class="map-size-controls-overlay">
+								<div class="map-size-group">
+									<span class="map-size-label">Rows:</span>
+									<button class="map-size-btn" data-map-action="decrease-rows">−</button>
+									<span class="map-size-value" data-map-rows>6</span>
+									<button class="map-size-btn" data-map-action="increase-rows">+</button>
+								</div>
+								<div class="map-size-group">
+									<span class="map-size-label">Cols:</span>
+									<button class="map-size-btn" data-map-action="decrease-cols">−</button>
+									<span class="map-size-value" data-map-cols>6</span>
+									<button class="map-size-btn" data-map-action="increase-cols">+</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Pickup Point Table -->
+						<div class="pickup-table-container">
+							<table class="pickup-table" data-pickup-table>
+								<thead>
+									<tr>
+										<th>Pickup</th>
+										<th>Coordinate</th>
+										<th>Side</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- Control Panel -->
+			<section class="panel panel--controller">
+
+				<!-- Autonomous State -->
+				<div class="panel__actions">
+
+					<!-- Autonomous Toggle -->
+					<button class="mode-toggle" type="button" data-auto-toggle>
+						<span class="mode-toggle__label">Autonomous</span>
+						<span class="mode-toggle__track">
+							<span class="mode-toggle__thumb"></span>
+						</span>
+					</button>
+
+					<div class="form-container">
+						<!-- Send Control Parameter -->
+						<form class="params-form control-form" autocomplete="off">
+							<!-- Proportional Parameter Input -->
+							<div class="params-form-input control-form-div">
+								<label for="proportional-param" class="control-form-label">Proportional</label>
+								<input type="number" id="proportional-param" name="proportional"
+									class="quick-button quick-input control-form-input" step="any" required>
+							</div>
+
+							<!-- Angle Parameter Input -->
+							<div class="params-form-input control-form-div">
+								<label for="angle-param" class="control-form-label">Angle</label>
+								<input type="number" id="angle-param" name="angle"
+									class="quick-button quick-input control-form-input" step="any" required>
+							</div>
+
+							<!-- Submit Button -->
+							<button type="submit"
+								class="quick-button quick-button--accent control-form-button">Update</button>
+						</form>
+
+						<!-- Send Speed -->
+						<form class="speed-form control-form" autocomplete="off">
+							<!-- Drive Speed Input -->
+							<div class="control-form-div">
+								<label for="driveSpeed" class="control-form-label">Drive Speed</label>
+								<input type="number" id="driveSpeed" name="driveSpeed"
+									class="quick-button quick-input control-form-input" step="any" required>
+							</div>
+
+							<!-- Turn Speed Input -->
+							<div class="control-form-div">
+								<label for="turnSpeed" class="control-form-label">Turn Speed</label>
+								<input type="number" id="turnSpeed" name="turnSpeed"
+									class="quick-button quick-input control-form-input" step="any" required>
+							</div>
+
+
+							<!-- Submit Button -->
+							<button type="submit"
+								class="quick-button quick-button--accent control-form-button">Update</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- Robot Control Panel -->
+				<div class="panel__body" aria-label="Controller">
+					<!-- Quick Actions -->
+					<div class="quick-actions">
+						<button class="quick-button" data-control="pickupLeft">&#x21e6; Pickup Left</button>
+						<button class="quick-button" data-control="pickupRight">Pickup Right &#x21e8;</button>
+						<button class="quick-button" data-control="endPickup">End Pickup</button>
+						<button class="quick-button quick-button--accent" data-control="dropoff">&#x21ea;
+							Dropoff</button>
+						<button class="quick-button" data-control="openClaw">Open Claw</button>
+						<button class="quick-button" data-control="closeClaw">Close Claw</button>
+					</div>
+					<!-- Angle Adjustments -->
+					<div class="arm-controls">
+						<!-- Arm Rotation -->
+						<div class="arm-control-group">
+							<span class="label__name">Arm Rotation</span>
+							<div class="arm-control-buttons">
+								<button class="arm-button arm-button--decrease" data-arm-control="armRotation"
+									data-arm-direction="negative" title="Rotate Left">
+									<span class="arm-button__icon">&larr;</span>
+								</button>
+								<button class="arm-button arm-button--increase" data-arm-control="armRotation"
+									data-arm-direction="positive" title="Rotate Right">
+									<span class="arm-button__icon">&rarr;</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- Top Axle -->
+						<div class="arm-control-group">
+							<span class="label__name">Top Axle</span>
+							<div class="arm-control-buttons">
+								<button class="arm-button arm-button--decrease" data-arm-control="topAxle"
+									data-arm-direction="negative" title="Decrease">
+									<span class="arm-button__icon">&minus;</span>
+								</button>
+								<button class="arm-button arm-button--increase" data-arm-control="topAxle"
+									data-arm-direction="positive" title="Increase">
+									<span class="arm-button__icon">+</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- Middle Axle -->
+						<div class="arm-control-group">
+							<span class="label__name">Middle Axle</span>
+							<div class="arm-control-buttons">
+								<button class="arm-button arm-button--decrease" data-arm-control="middleAxle"
+									data-arm-direction="negative" title="Decrease">
+									<span class="arm-button__icon">&minus;</span>
+								</button>
+								<button class="arm-button arm-button--increase" data-arm-control="middleAxle"
+									data-arm-direction="positive" title="Increase">
+									<span class="arm-button__icon">+</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- Base Axle -->
+						<div class="arm-control-group">
+							<span class="label__name">Base Axle</span>
+							<div class="arm-control-buttons">
+								<button class="arm-button arm-button--decrease" data-arm-control="baseAxle"
+									data-arm-direction="negative" title="Decrease">
+									<span class="arm-button__icon">&minus;</span>
+								</button>
+								<button class="arm-button arm-button--increase" data-arm-control="baseAxle"
+									data-arm-direction="positive" title="Increase">
+									<span class="arm-button__icon">+</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- Claw Rotation -->
+						<div class="arm-control-group">
+							<span class="label__name">Claw Rotation</span>
+							<div class="arm-control-buttons">
+								<button class="arm-button arm-button--decrease" data-arm-control="clawRotation"
+									data-arm-direction="negative" title="Rotate Left">
+									<span class="arm-button__icon">&larr;</span>
+								</button>
+								<button class="arm-button arm-button--increase" data-arm-control="clawRotation"
+									data-arm-direction="positive" title="Rotate Right">
+									<span class="arm-button__icon">&rarr;</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Movement Buttons -->
+					<div class="controller__actions">
+						<!-- Driving Control -->
+						<div class="controls" data-manual-controls>
+							<button class="control-button control-button--left" data-control="left">&larr; Turn
+								Left</button>
+							<button class="control-button control-button--forward" data-control="forward">&uarr;
+								Forward</button>
+							<button class="control-button control-button--right" data-control="right">Turn Right
+								&rarr;</button>
+							<button class="control-button control-button--stop" data-control="stop">&#9632;
+								Stop</button>
+							<button class="control-button control-button--backward" data-control="backward">&darr;
+								Backward</button>
+						</div>
+						<!-- Hiding of Controls in Autonomous -->
+						<div class="auto-overlay" data-auto-overlay hidden>
+							<div class="auto-overlay__badge">Autonomous driving active</div>
+							<p class="muted">Manual controls are hidden while the robot is driving itself.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
