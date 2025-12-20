@@ -1,0 +1,401 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May 13 11:35:45 2025
+# Process ID: 253961
+# Current directory: /home/ferpe211/TSEA83-Project/src/work
+# Command line: vivado -mode batch -source /courses/TSEA83/bin/build.tcl -notrace -journal vivado_synth.jou -log vivado_synth.log -tclargs synth uprogCPU.vhd mem/uMem.vhd mem/pMem.vhd kbd/kbd_enc.vhd kbd/kbd_mngr.vhd K1.vhd K2.vhd Piezo.vhd GRx.vhd vga/vga_motor.vhd vga/tile_rom.vhd Basys3.xdc
+# Log file: /home/ferpe211/TSEA83-Project/src/work/vivado_synth.log
+# Journal file: /home/ferpe211/TSEA83-Project/src/work/vivado_synth.jou
+# Running On: muxen1-111.ad.liu.se, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 12, Host memory: 16198 MB
+#-----------------------------------------------------------
+source /courses/TSEA83/bin/build.tcl -notrace
+
+############################################################################
+#### Build script 'Version 1.2 - 2024-05-09'
+
+Doing synth
+
+############################################################################
+#### Synthesizing...
+
+Reading: uprogCPU.vhd
+Reading: mem/uMem.vhd
+Reading: mem/pMem.vhd
+Reading: kbd/kbd_enc.vhd
+Reading: kbd/kbd_mngr.vhd
+Reading: K1.vhd
+Reading: K2.vhd
+Reading: Piezo.vhd
+Reading: GRx.vhd
+Reading: vga/vga_motor.vhd
+Reading: vga/tile_rom.vhd
+Reading: Basys3.xdc
+Command: synth_design -top uprogCPU -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 253988
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2247.121 ; gain = 404.645 ; free physical = 1609 ; free virtual = 17508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'uprogCPU' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:24]
+INFO: [Synth 8-3491] module 'K1' declared at '/home/ferpe211/TSEA83-Project/src/K1.vhd:5' bound to instance 'U_K1' of component 'K1' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'K1' [/home/ferpe211/TSEA83-Project/src/K1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'K1' (0#1) [/home/ferpe211/TSEA83-Project/src/K1.vhd:34]
+INFO: [Synth 8-3491] module 'K2' declared at '/home/ferpe211/TSEA83-Project/src/K2.vhd:5' bound to instance 'U_K2' of component 'K2' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:375]
+INFO: [Synth 8-638] synthesizing module 'K2' [/home/ferpe211/TSEA83-Project/src/K2.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'K2' (0#1) [/home/ferpe211/TSEA83-Project/src/K2.vhd:12]
+INFO: [Synth 8-3491] module 'GRx' declared at '/home/ferpe211/TSEA83-Project/src/GRx.vhd:5' bound to instance 'U_GRX' of component 'GRx' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:376]
+INFO: [Synth 8-638] synthesizing module 'GRx' [/home/ferpe211/TSEA83-Project/src/GRx.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'GRx' (0#1) [/home/ferpe211/TSEA83-Project/src/GRx.vhd:18]
+INFO: [Synth 8-3491] module 'uMem' declared at '/home/ferpe211/TSEA83-Project/src/mem/uMem.vhd:6' bound to instance 'U0' of component 'uMem' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'uMem' [/home/ferpe211/TSEA83-Project/src/mem/uMem.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'uMem' (0#1) [/home/ferpe211/TSEA83-Project/src/mem/uMem.vhd:12]
+INFO: [Synth 8-3491] module 'pMem' declared at '/home/ferpe211/TSEA83-Project/src/mem/pMem.vhd:5' bound to instance 'U1' of component 'pMem' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:382]
+INFO: [Synth 8-638] synthesizing module 'pMem' [/home/ferpe211/TSEA83-Project/src/mem/pMem.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'pMem' (0#1) [/home/ferpe211/TSEA83-Project/src/mem/pMem.vhd:20]
+INFO: [Synth 8-3491] module 'KBD_ENC' declared at '/home/ferpe211/TSEA83-Project/src/kbd/kbd_enc.vhd:17' bound to instance 'U2' of component 'kbd_enc' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:394]
+INFO: [Synth 8-638] synthesizing module 'KBD_ENC' [/home/ferpe211/TSEA83-Project/src/kbd/kbd_enc.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'KBD_ENC' (0#1) [/home/ferpe211/TSEA83-Project/src/kbd/kbd_enc.vhd:28]
+INFO: [Synth 8-3491] module 'KBD_MNGR' declared at '/home/ferpe211/TSEA83-Project/src/kbd/kbd_mngr.vhd:13' bound to instance 'U3' of component 'kbd_mngr' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:396]
+INFO: [Synth 8-638] synthesizing module 'KBD_MNGR' [/home/ferpe211/TSEA83-Project/src/kbd/kbd_mngr.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'KBD_MNGR' (0#1) [/home/ferpe211/TSEA83-Project/src/kbd/kbd_mngr.vhd:24]
+INFO: [Synth 8-3491] module 'vga_motor' declared at '/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:15' bound to instance 'U5' of component 'vga_motor' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:398]
+INFO: [Synth 8-638] synthesizing module 'vga_motor' [/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:30]
+INFO: [Synth 8-3491] module 'tile_rom' declared at '/home/ferpe211/TSEA83-Project/src/vga/tile_rom.vhd:14' bound to instance 'U0b' of component 'tile_rom' [/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'tile_rom' [/home/ferpe211/TSEA83-Project/src/vga/tile_rom.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'tile_rom' (0#1) [/home/ferpe211/TSEA83-Project/src/vga/tile_rom.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'vga_motor' (0#1) [/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:30]
+INFO: [Synth 8-3491] module 'Piezo' declared at '/home/ferpe211/TSEA83-Project/src/Piezo.vhd:5' bound to instance 'u6' of component 'Piezo' [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:400]
+INFO: [Synth 8-638] synthesizing module 'Piezo' [/home/ferpe211/TSEA83-Project/src/Piezo.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Piezo' (0#1) [/home/ferpe211/TSEA83-Project/src/Piezo.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'uprogCPU' (0#1) [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:24]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Xpixel2_reg' and it is trimmed from '10' to '5' bits. [/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Ypixel2_reg' and it is trimmed from '10' to '5' bits. [/home/ferpe211/TSEA83-Project/src/vga/vga_motor.vhd:180]
+WARNING: [Synth 8-3848] Net SR in module/entity uprogCPU does not have driver. [/home/ferpe211/TSEA83-Project/src/uprogCPU.vhd:157]
+WARNING: [Synth 8-7129] Port VR_data[7] in module vga_motor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VR_data[6] in module vga_motor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VR_data[5] in module vga_motor is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TB_Grx[3] in module GRx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TB_Grx[2] in module GRx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TB_Grx[1] in module GRx is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TB_Grx[0] in module GRx is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2343.059 ; gain = 500.582 ; free physical = 1501 ; free virtual = 17403
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2360.871 ; gain = 518.395 ; free physical = 1491 ; free virtual = 17393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2360.871 ; gain = 518.395 ; free physical = 1491 ; free virtual = 17393
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.871 ; gain = 0.000 ; free physical = 1491 ; free virtual = 17393
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ferpe211/TSEA83-Project/src/Basys3.xdc]
+Finished Parsing XDC File [/home/ferpe211/TSEA83-Project/src/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ferpe211/TSEA83-Project/src/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uprogCPU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uprogCPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2510.621 ; gain = 0.000 ; free physical = 1442 ; free virtual = 17343
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2510.656 ; gain = 0.000 ; free physical = 1442 ; free virtual = 17343
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1443 ; free virtual = 17343
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1443 ; free virtual = 17343
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1443 ; free virtual = 17343
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'Wrst_kbd_mngrate_reg' in module 'KBD_MNGR'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 standby |                               00 |                               00
+                 wrindex |                               01 |                               01
+                   wrcur |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Wrst_kbd_mngrate_reg' using encoding 'sequential' in module 'KBD_MNGR'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1423 ; free virtual = 17324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 3     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 11    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 17    
++---RAMs : 
+	             468K Bit	(29952 X 16 bit)          RAMs := 1     
+	              16K Bit	(2048 X 8 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	  47 Input   24 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 6     
+	   4 Input   16 Bit        Muxes := 1     
+	   8 Input   12 Bit        Muxes := 1     
+	  17 Input    7 Bit        Muxes := 1     
+	   5 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 23    
+	  12 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'U1/vga_data_out_reg' and it is trimmed from '8' to '5' bits. [/home/ferpe211/TSEA83-Project/src/mem/pMem.vhd:471]
+WARNING: [Synth 8-3332] Sequential element (U3/FSM_sequential_Wrst_kbd_mngrate_reg[1]) is unused and will be removed from module uprogCPU.
+WARNING: [Synth 8-3332] Sequential element (U3/FSM_sequential_Wrst_kbd_mngrate_reg[0]) is unused and will be removed from module uprogCPU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1416 ; free virtual = 17324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+----------------------+---------------+----------------+
+|Module Name | RTL Object           | Depth x Width | Implemented As | 
++------------+----------------------+---------------+----------------+
+|uprogCPU    | U5/U0b/color_idx_reg | 2048x4        | Block RAM      | 
++------------+----------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|uprogCPU    | U1/PROG_RAM_reg | 29 K x 16(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 16     | 
+|uprogCPU    | U1/TILE_RAM_reg | 2 K x 5(READ_FIRST)    | W |   | 2 K x 5(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1427 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1426 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|uprogCPU    | U1/PROG_RAM_reg | 29 K x 16(READ_FIRST)  | W | R |                        |   |   | Port A           | 0      | 16     | 
+|uprogCPU    | U1/TILE_RAM_reg | 2 K x 5(READ_FIRST)    | W |   | 2 K x 5(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/PROG_RAM_reg_0_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U1/TILE_RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance U5/U0b/color_idx_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    30|
+|3     |LUT1     |     8|
+|4     |LUT2     |   124|
+|5     |LUT3     |    80|
+|6     |LUT4     |    86|
+|7     |LUT5     |    38|
+|8     |LUT6     |   214|
+|9     |MUXF7    |     1|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |    16|
+|28    |FDRE     |   283|
+|29    |FDSE     |     1|
+|30    |IBUF     |     4|
+|31    |OBUF     |    15|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2510.656 ; gain = 518.395 ; free physical = 1425 ; free virtual = 17333
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2510.656 ; gain = 668.180 ; free physical = 1425 ; free virtual = 17333
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2510.656 ; gain = 0.000 ; free physical = 1717 ; free virtual = 17624
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ferpe211/TSEA83-Project/src/Basys3.xdc]
+Finished Parsing XDC File [/home/ferpe211/TSEA83-Project/src/Basys3.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2574.652 ; gain = 0.000 ; free physical = 1710 ; free virtual = 17625
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f269d427
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2574.688 ; gain = 1069.410 ; free physical = 1710 ; free virtual = 17625
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2033.303; main = 1739.515; forked = 441.609
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4105.109; main = 2574.656; forked = 1626.500
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1709 ; free virtual = 17625
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1709 ; free virtual = 17625
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1709 ; free virtual = 17625
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1709 ; free virtual = 17624
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1708 ; free virtual = 17624
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1709 ; free virtual = 17625
+Write Physdb Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2606.668 ; gain = 0.000 ; free physical = 1711 ; free virtual = 17627
+INFO: [Common 17-1381] The checkpoint '/home/ferpe211/TSEA83-Project/src/work/synth.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Tue May 13 11:36:10 2025...

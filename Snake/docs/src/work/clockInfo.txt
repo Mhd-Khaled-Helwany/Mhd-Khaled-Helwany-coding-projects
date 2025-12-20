@@ -1,0 +1,10 @@
+-------------------------------------
+| Tool Version : Vivado v.2023.2
+| Date         : Tue May 13 13:47:38 2025
+| Host         : muxen2-113.ad.liu.se
+| Design       : checkpoint_synth
+| Device       : xc7a35ti-cpg236-1L-I-
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+

@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May 13 11:37:00 2025
+# Process ID: 275361
+# Current directory: /home/ferpe211/TSEA83-Project/src/work
+# Command line: vivado -mode batch -source /courses/TSEA83/bin/build.tcl -notrace -journal vivado_prog.jou -log vivado_prog.log -tclargs prog uprogCPU.vhd mem/uMem.vhd mem/pMem.vhd kbd/kbd_enc.vhd kbd/kbd_mngr.vhd K1.vhd K2.vhd Piezo.vhd GRx.vhd vga/vga_motor.vhd vga/tile_rom.vhd Basys3.xdc
+# Log file: /home/ferpe211/TSEA83-Project/src/work/vivado_prog.log
+# Journal file: /home/ferpe211/TSEA83-Project/src/work/vivado_prog.jou
+# Running On: muxen1-111.ad.liu.se, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 12, Host memory: 16198 MB
+#-----------------------------------------------------------
+source /courses/TSEA83/bin/build.tcl -notrace
+
+############################################################################
+#### Build script 'Version 1.2 - 2024-05-09'
+
+
+############################################################################
+#### Programming FPGA board...
+
+
+############################################################################
+#### Open hardware manager
+
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2023.2
+  **** Build date : Oct 13 2023 at 20:26:23
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2023.2.0
+  ****** Build date   : Oct 10 2023-06:01:56
+    **** Build number : 2023.2.1696910516
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+
+############################################################################
+#### Open target
+
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B5AEB8A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+
+############################################################################
+#### Program device
+
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Common 17-206] Exiting Vivado at Tue May 13 11:37:07 2025...

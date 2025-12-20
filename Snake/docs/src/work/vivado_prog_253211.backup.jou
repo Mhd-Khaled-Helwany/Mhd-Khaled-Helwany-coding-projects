@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue May 13 11:34:29 2025
+# Process ID: 253211
+# Current directory: /home/ferpe211/TSEA83-Project/src/work
+# Command line: vivado -mode batch -source /courses/TSEA83/bin/build.tcl -notrace -journal vivado_prog.jou -log vivado_prog.log -tclargs prog uprogCPU.vhd mem/uMem.vhd mem/pMem.vhd kbd/kbd_enc.vhd kbd/kbd_mngr.vhd K1.vhd K2.vhd Piezo.vhd GRx.vhd vga/vga_motor.vhd vga/tile_rom.vhd Basys3.xdc
+# Log file: /home/ferpe211/TSEA83-Project/src/work/vivado_prog.log
+# Journal file: /home/ferpe211/TSEA83-Project/src/work/vivado_prog.jou
+# Running On: muxen1-111.ad.liu.se, OS: Linux, CPU Frequency: 2100.000 MHz, CPU Physical cores: 12, Host memory: 16198 MB
+#-----------------------------------------------------------
+source /courses/TSEA83/bin/build.tcl -notrace
