@@ -1,0 +1,1 @@
+Files from my thesis project development that I am allowed to publish. This is a small snippet of what I worked on during development of the shared memory SPSC ring-buffer. All of the files in this directory are fully owned by me. The rest of the files I worked on during the thesis project were not allowed to be included by the client because they are confidential.
