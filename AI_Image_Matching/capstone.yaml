@@ -1,0 +1,34 @@
+# FlyRank Backend Track Capstone — AI Image Matching Engine
+
+run: fastapi dev src/api/main.py --port 8000
+seed: USE_REAL_MODEL=1 py scripts/seed_embeddings.py
+test: py -m pytest -q
+
+base_url: http://127.0.0.1:8000
+
+endpoints:
+  - GET /health
+    # expect: {"status":"ok","images":50,"embedded_images":50,"posts":18,"embedded_posts":18}
+  - GET /posts
+    # expect: the 18 labeled blog posts
+  - GET /posts/1/images
+    # expect: result=accepted, redfox.jpg suggested, wolf.jpg ranked #2 and rejected
+  - GET /posts/18/images
+    # expect: result=no_confident_match with per-candidate rejection reasons (chess post)
+  - GET /posts/17/images
+    # expect: result=no_confident_match, subject-mismatch reason (lions post)
+  - GET "/posts/1/images?similarity_threshold=0.99"
+    # forced-wolf probe: raises the similarity bar so the guard walk exposes
+    # its verdict on every runner-up; wolf.jpg is rejected for the fox post
+    # with "Subject mismatch: expected ['red fox'], detected wolf"
+  - POST /review/suggestions
+    # body {"post_id": 1} -> persists the suggestion as pending (review workflow)
+  - GET /review/suggestions?status=pending
+    # expect: the review admin table
+  - GET /review/suggestions/1
+    # inspect why: fresh guard verdict + decision trail for the suggestion
+  - POST /review/suggestions/1/decision
+    # body {"decision": "approved"} or {"decision": "rejected", "reason": "..."}
+    # -> appends to the review trail; invalid decision values return 422
+  - GET /review/decisions
+    # expect: append-only trail recording both approvals and rejections
